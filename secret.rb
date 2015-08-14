@@ -1,7 +1,7 @@
 require 'json'
 
-# Note: Get it here: https://github.com/C-Bouthoorn/Ruby-Frameworks
-require 'FileIO.rb';
+# Get it [here][https://github.com/C-Bouthoorn/Ruby-Frameworks]
+require '~/Ruby Frameworks/FileIO.rb';
 
 def merge x, y
   data=[ x.split("\n"), y.split("\n") ]
@@ -59,20 +59,20 @@ def main args
     end
 
     output=merge(output, temp)
-    lines="-\n-\n-\n-\n-"
+    lines="#{chars[1]}\n"*pattern.size
     output=merge(output, lines) if ix < word.length-1
   end
 
-  if settings['equal-amount-of-dashes-per-line']
+  if settings['equal-amount-chars-2-per-line']
     max=0
     output=output.split "\n"
 
     output.each do |line|
-      max=line.count('-') if line.count('-') > max
+      max=line.count(chars[1]) if line.count(chars[1]) > max
     end
 
     output.each.with_index do |line, ix|
-      dash='-' * ( max - line.count('-') )
+      dash= '-' * ( max - line.count(chars[1]) )
       output[ix]+=dash
     end
 
