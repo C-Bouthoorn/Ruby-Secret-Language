@@ -1,13 +1,13 @@
 {
-  "word": "Hi, I'm Charlie.",
+  "word": "Hi xD",
 
   "settings": {
     "word-to-uppercase": true,
-    "equal-amount-of-dashes-per-line": true
+    "equal-amount-chars-2-per-line": true
   },
 
   "chars": [
-    "#",
+    "‽",
     "-"
   ],
 
